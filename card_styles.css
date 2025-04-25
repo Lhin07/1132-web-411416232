@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #c8d2da;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 250px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img.main-img {
+  width: 100%;
+  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 16px 0 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px; 
+  padding: 0 8px; 
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/* Specific Card Colors */
+.card.pink {
+  border-color: #FF2600;
+}
+
+.card.pink .btn {
+  background-color: #ffe0e6;
+  color: black;
+}
+
+.card.blue {
+  border-color: #0066FF;
+}
+
+.card.blue .btn {
+  background-color: #e6f0ff;
+  color: black;
+}
+
+.card.green {
+  border-color: #00C853;
+}
+
+.card.green .btn {
+  background-color: #d9fbe0;
+  color: black;
+}
+
+.card.yellow {
+  border-color: #FFDD00;
+}
+
+.card.yellow .btn {
+  background-color: #fff6cc;
+  color: black;
+}

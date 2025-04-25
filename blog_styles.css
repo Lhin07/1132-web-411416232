@@ -1,0 +1,150 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(206, 202, 202);
+  color: rgb(47, 40, 224);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+}
+
+:root {
+  --primary: #645cff;
+  --primary-dark: #3c3799;
+  --grey-light: #f1f5f9;
+  --grey: #64748b;
+  --grey-dark: #0f172a;
+  --letter-spacing: 2px;
+  --fluid-width: 90vw;
+  --max-width: 1170px;
+  --border-radius: 0.3rem;
+}
+
+img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.section-title {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 3rem 0 2rem;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+/* Media Query Layout - Explicit column changes at breakpoints */
+.blogs-center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(100, 148, 237, 0.1); /* Light blue background to distinguish */
+  border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 1200px) {
+  .blogs-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blogs-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blogs-center {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Minmax Layout - Fluid columns that adjust automatically */
+.blogs-center2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(144, 238, 144, 0.1); /* Light green background to distinguish */
+  border-radius: var(--border-radius);
+}
+
+/* Common blog card styles */
+.blog {
+  background-color: white;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.blog:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.blogs-content {
+  padding-top: 1rem;
+}
+
+.blogs-content span {
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: bold;
+  letter-spacing: var(--letter-spacing);
+}
+
+.blogs-content h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.blogs-content p {
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+}
+
+.blogs-content a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--primary-dark);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.blogs-content a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+i {
+  margin-left: 0.5rem;
+  color: #2131c2;
+}
+
+/* Remove the teacher-provided layout styling as it's causing issues */
+@media screen and (max-width: 650px) {
+  body {
+    display: block;
+    position: static;
+    top: auto;
+    scale: 1;
+  }
+}
